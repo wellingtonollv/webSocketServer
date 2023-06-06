@@ -3,7 +3,7 @@ const webSocket = require("ws");
 const wss = new webSocket.Server({ port: 8080 });
 
 wss.on("connection", (ws) => {
-  console.log("[LOG] A client connected.");
+  console.log("[LOG] client connected.");
   ws.on("message", (message) => {
     try {
       const bufferString = message.toString("utf8");
@@ -23,6 +23,6 @@ wss.on("connection", (ws) => {
 
   // Handle disconnection
   ws.on("close", () => {
-    console.log("A client disconnected.");
+    console.log("[LOG] client disconnected.");
   });
 });
