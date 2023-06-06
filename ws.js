@@ -16,12 +16,8 @@ wss.on("connection", (ws) => {
         });
       }
     } catch (error) {
-      console.log("[ERROR] PARSING MESSAGE", error?.message);
-      wss.clients.forEach((client) => {
-        if (client.readyState === webSocket.OPEN) {
-          client.send(message);
-        }
-      });
+      console.log("[ERROR] INVALID MESSAGE", error?.message);
+      
     }
   });
 
