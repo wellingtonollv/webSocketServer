@@ -1,0 +1,27 @@
+{
+  "name": "websocketserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ws.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wellingtonollv/webSocketServer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wellingtonollv/webSocketServer/issues"
+  },
+  "homepage": "https://github.com/wellingtonollv/webSocketServer#readme",
+  "dependencies": {
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.1.4",
+    "nodemon": "^2.0.22"
+  }
+}
