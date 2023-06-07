@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start":"node ws.js",
     "dev": "nodemon ws.js"
   },
   "repository": {
