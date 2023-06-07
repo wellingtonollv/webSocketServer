@@ -9,6 +9,7 @@ wss.on("connection", (ws) => {
     try {
       const jsonObject = JSON.parse(bufferString);
       if (jsonObject.method === "HEART_RATE") {
+        console.log("[LOG] HEART_RATE", jsonObject);
         wss.clients.forEach((client) => {
           if (client.readyState === webSocket.OPEN) {
             client.send(message);
