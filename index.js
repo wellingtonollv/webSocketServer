@@ -3,7 +3,7 @@ const express = require('express');
 
 const app = express();
 const server = require('http').createServer(app);
-const wss = new WebSocket.Server({ server });
+const wss = new webSocket.Server({ server });
 
 wss.on("connection", (ws) => {
   console.log("[LOG] client connected.");
