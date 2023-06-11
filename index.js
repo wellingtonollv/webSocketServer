@@ -1,6 +1,9 @@
 const webSocket = require("ws");
+const express = require('express');
 
 const wss = new webSocket.Server({ port: 8080 });
+const app = express();
+const server = require('http').createServer(app);
 
 wss.on("connection", (ws) => {
   console.log("[LOG] client connected.");
@@ -25,4 +28,8 @@ wss.on("connection", (ws) => {
   ws.on("close", () => {
     console.log("[LOG] client disconnected.");
   });
+});
+
+server.listen(process.env.PORT || 3000, () => {
+  console.log(`Server started on port ${server.address().port}`);
 });
